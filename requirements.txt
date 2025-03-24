@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+openai
+rank_bm25
+langchain
+langchain_community
+python-dotenv
