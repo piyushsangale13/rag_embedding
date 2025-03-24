@@ -9,7 +9,6 @@ router = APIRouter()
 
 @router.post("/upload", response_model=DocumentResponse)
 async def upload_document(doc: DocumentUpload, db: Session = Depends(get_db)):
-    # Generate an embedding for the document content
     embedding = generate_embedding(doc.content)
     new_doc = create_document(db, doc.title, doc.content, embedding)
     return new_doc
